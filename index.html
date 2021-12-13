@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js" defer></script>
+    </head>
+    <body>
+        <!--
+            x-data is how we put state in the scope of the tag. It is defined as a object in javascript. 
+            It is only available to the tag where it is defined and the tags under it as well.
+        -->
+        <div x-data = "{open: false}">
+            <!-- 
+                @click
+                or 
+                x-on:click
+
+                @click.away is clicking anywhere other than the tag
+
+                @keydown.escape is press of ESC key. There are other key binds as well
+             -->
+            <button @click= "open = !open" 
+                @keydown.escape = "open = false"
+            > 
+                Open DropDown 
+            </button>
+            <ul 
+                x-show="open"
+                @click.away = "open = false"
+            >
+                Dropdown Body
+            </ul>
+        
+        </div>   
+
+    </body>
+    
+</html>
