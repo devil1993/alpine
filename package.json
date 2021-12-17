@@ -14,7 +14,8 @@
     "build:html": "posthtml -c posthtml.json",
     "watch:html": "onchange \"src/views\" -- npm run build:html",
     "watch": "run-p serve watch:*",
-    "build": "run-p build:*"
+    "build": "run-p build:*",
+    "start": "run-p serve"
   },
   "repository": {
     "type": "git",
