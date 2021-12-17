@@ -15,7 +15,7 @@
     "watch:html": "onchange \"src/views\" -- npm run build:html",
     "watch": "run-p serve watch:*",
     "build": "run-p build:*",
-    "start": "node node_modules/http-server/bin/http-server ./dist -p 80"
+    "start": "node node_modules/http-server/bin/http-server ./dist"
   },
   "repository": {
     "type": "git",
